@@ -1,0 +1,44 @@
+.addContact {
+    width: 40rem;
+    background-color: #fff;
+    padding: 10px 8px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px #ccc;
+    margin-top: 20px;
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.formControl input {
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    border: 1px solid #a78bfa;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+input:focus {
+    border: 2px solid #8b5cf6;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.AddBtn {
+    background-color: #5b21b6;
+    color: #fff;
+}
+
+.formControl label {
+    font-weight: 700;
+}
