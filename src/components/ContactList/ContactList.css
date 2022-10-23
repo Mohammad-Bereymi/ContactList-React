@@ -1,0 +1,64 @@
+.contactList {
+    min-width: 35rem;
+}
+
+.contact {
+    background-color: #fff;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 2px solid #5b21b6;
+    border-radius: 10px;
+}
+
+.contactList_desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileIcons {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.contactList_handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactList_handler button {
+    background-color: white;
+    color: #5b21b6;
+    border: 1.5px solid #5b21b6;
+    padding: 6px 10px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.trashIcon {
+    color: #be123c;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.description {
+    line-height: 25px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.header button {
+    border: 1px solid #5b21b6;
+    background-color: #5b21b6;
+    color: #fff;
+    padding: 6px 12px;
+}
