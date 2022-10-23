@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import addOneContact from "../services/addContactService";
 import "./AddContact.css";
 
 const AddContact = ({ history }) => {
@@ -7,7 +8,6 @@ const AddContact = ({ history }) => {
 
   const changeHandler = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
-    console.log(e.target.value);
   };
 
   const addContactHandler = async (e) => {
@@ -17,7 +17,7 @@ const AddContact = ({ history }) => {
     }
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3002/contacts", contact);
+      await addOneContact(contact);
       history.push("/");
     } catch (error) {
       console.log(error);

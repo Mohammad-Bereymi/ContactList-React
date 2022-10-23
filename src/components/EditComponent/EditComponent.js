@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import updateContact from "../services/updateContactService";
+import getOneContact from "../services/getOneContact";
 const EditComponent = ({ history, match }) => {
   const [contact, setContact] = useState({ name: "", email: "", phone: "" });
   //   const id = match.params.id;
@@ -16,10 +17,7 @@ const EditComponent = ({ history, match }) => {
     }
     e.preventDefault();
     try {
-      await axios.put(
-        `http://localhost:3002/contacts/${match.params.id}`,
-        contact
-      );
+      await updateContact(match.params.id, contact);
       history.push("/");
     } catch (error) {
       console.log(error);
@@ -27,9 +25,7 @@ const EditComponent = ({ history, match }) => {
   };
 
   const fetchLocal = async () => {
-    const { data } = await axios.get(
-      `http://localhost:3002/contacts/${match.params.id}`
-    );
+    const { data } = await getOneContact(match.params.id);
     setContact({ name: data.name, email: data.email, phone: data.phone });
   };
 
